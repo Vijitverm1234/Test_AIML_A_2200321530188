@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<style>
+    .login-page{
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        padding: 20px 40px;
+        border: 1px solid black;
+        border-radius: 20px;
+        margin-top: 30px;
+    }
+    .form-group{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    button{
+        background-color: black;
+        color: white;
+        padding: 10px ;
+        border: none;
+        border-radius: 10px;
+    }
+    ::placeholder{
+        text-align: center;
+        font-weight: 600;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+         margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    }
+</style>
+<body>
+    <div class="login-page">
+      <center><h1>Login</h1></center>  
+      <div class="form-group">
+      <label for="user">User_ID :</label><input type="text" id="user"name="user" placeholder="User_Name"></div>
+      <div class="form-group">
+      <label for="pass">Password :</label><input type="password" id="password"name="pass" placeholder="User_Name"></div>
+   <div class="btn">
+    <a href="welcome.html" id="redirect"onclick=check()>Login</a>
+    <a href="" onclick=reset()>Reset</a>
+   </div>
+    </div>
+    <script>
+        const user=document.getElementById("user").value;
+        const pass=document.getElementById("password").value;
+        const btn=getElementById("redirect");
+        function check(){
+            if(user!=="admin" &&  pass!=="admin" ){
+                alert("Enter correct Credentials")
+            }
+        }
+        function reset(){
+            user=""
+            pass=""
+        }
+    </script>
+</body>
+</html>
